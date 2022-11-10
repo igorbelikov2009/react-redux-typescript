@@ -1,4 +1,7 @@
 import React, { FC, useEffect } from "react";
+import Container from "react-bootstrap/Container";
+import ListGroup from "react-bootstrap/ListGroup";
+import Row from "react-bootstrap/Row";
 import { useActions } from "../hooks/useAction";
 import { useTypedSelector } from "../hooks/useTypedSelector"; // наш, самодельный хук
 // А нижние импорты, после создания хука useActions() нам уже не нужны
@@ -40,11 +43,15 @@ const UserList: FC = () => {
   }
 
   return (
-    <div>
-      {users.map((user) => (
-        <div key={user.id}>{user.name} </div>
-      ))}
-    </div>
+    <Container>
+      <Row>
+        <ListGroup>
+          {users.map((user) => (
+            <ListGroup.Item key={user.id}>{user.name}</ListGroup.Item>
+          ))}
+        </ListGroup>
+      </Row>
+    </Container>
   );
 };
 

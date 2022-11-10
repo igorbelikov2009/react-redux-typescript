@@ -1,14 +1,16 @@
-import React from "react";
-import TodoList from "./components/TodoList";
-import UserList from "./components/UserList";
+import React, { FC } from "react";
+import "./App.css";
+import NavBar from "./components/NavBar";
+import { BrowserRouter } from "react-router-dom";
+import AppRouter from "./components/AppRouter";
 
-function App() {
+const App: FC = () => {
   return (
-    <div className="App">
-      <UserList />
-      <TodoList />
-    </div>
+    <BrowserRouter>
+      <NavBar />
+      <AppRouter />
+    </BrowserRouter>
   );
-}
+};
 
 export default App;

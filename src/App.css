@@ -1,0 +1,18 @@
+.ml-2 {
+  margin-left: 2rem;
+}
+.ml-4 {
+  margin-left: 4rem;
+}
+.mt-4 {
+  margin-top: 4rem;
+}
+.mb-4 {
+  margin-bottom: 4rem;
+}
+
+.todoColumn {
+  border: 1px solid blue;
+  margin-bottom: 24px;
+  padding: 0 24px;
+}
